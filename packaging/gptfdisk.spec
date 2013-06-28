@@ -7,6 +7,7 @@ Group:          Base/System
 Url:            http://rodsbooks.com/gdisk
 
 Source:         %name-%version.tar.xz
+Source1001: 	gptfdisk.manifest
 BuildRequires:  gcc-c++
 BuildRequires:  ncurses-devel
 BuildRequires:  xz
@@ -34,6 +35,7 @@ provides a few additional partition manipulation features.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 CFLAGS="%optflags" CXXFLAGS="%optflags" make %{?_smp_mflags}
@@ -45,6 +47,7 @@ install -pm0755 fixparts {,c,s}gdisk "$b/%_sbindir/";
 install -pm0644 *.8 "$b/%_mandir/man8/";
 
 %files
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %license COPYING
 %_sbindir/gdisk
@@ -55,6 +58,7 @@ install -pm0644 *.8 "$b/%_mandir/man8/";
 %_mandir/man8/sgdisk.8*
 
 %files fixparts
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %license COPYING 
 %_sbindir/fixparts
