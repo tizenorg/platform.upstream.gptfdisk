@@ -1,0 +1,8 @@
+Change-Id: I6f943e483ea9e6b4d6fb495de1048aae3840765d
+Code-Review+2: Ryan Ware <ware@linux.intel.com>
+Verified+1: Ryan Ware <ware@linux.intel.com>
+Submitted-by: Ryan Ware <ware@linux.intel.com>
+Submitted-at: Mon, 08 Jul 2013 09:40:38 -0700
+Reviewed-on: https://review.tizen.org/gerrit/4756
+Project: platform/upstream/gptfdisk
+Branch: refs/heads/tizen
